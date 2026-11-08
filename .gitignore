@@ -1,0 +1,52 @@
+# Operating system files
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+.ipynb_checkpoints/
+
+# Python packaging and build output
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Test coverage
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+.tox/
+.nox/
+
+# Local environment settings and secrets
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Editor settings and temporary files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.log
+
+# Generated detection and training output
+/output/
+/runs/
