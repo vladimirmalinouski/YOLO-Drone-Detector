@@ -1,7 +1,3 @@
-https://www.kaggle.com/datasets/muki2003/yolo-drone-detection-dataset
-https://zenodo.org/records/16017313?preview_file=datasets_seg.zip
-
-
 ## Install dependencies
 
 Run the commands below from the repository root (the folder containing
@@ -76,3 +72,54 @@ python detect-video.py test-data/2.mp4 output/2-detected.mp4
 
 The `test-data/` folder also contains `3.mp4` and `4.mp4`. Open the resulting
 MP4 in your video player to review the detections.
+
+
+
+## Data
+---
+The data used to train the YOLO model comes from two sources  
+source #1  
+[zenodo](https://zenodo.org/records/16017313?preview_file=datasets_seg.zip)  
+this source has images of drones flying in the sky at a distance. the dataset has  
+- 18061 RGB images
+    - 10763 training
+    - 2720 validation
+    - 4578 for test
+
+
+from this dataset I will use
+- 2000 images for training
+- 500 images for validation
+- 500 images for test
+
+! it is important to note that this dataset provides information in segmentation format, this segmentation data will need to be converted into
+
+
+source #2
+[kaggle](https://www.kaggle.com/datasets/muki2003/yolo-drone-detection-dataset)
+this source has images of drones flying close to the camera, which the other dataset doesn't have 
+
+I will use all the data from this dataset which includes
+- 1012 images for training
+- 161 images validation 
+
+
+with these two datasets the YOLO model will be trained with
+- 3012 images for training
+- 661 images for validation
+- 500 images for test
+
+
+## First Training Round Results (imgsz 640)
+--- Test Results ---  
+- Precision:  0.9307
+- Recall:     0.8040
+- mAP@50:     0.8716
+- mAP@50-95:  0.4446
+
+## Training after tuning hyperparameters and training for 150 epochs (imgsz 1280)
+--- Test Results ---
+- Precision:  0.9175
+- Recall:     0.8980
+- mAP@50:     0.9099
+- mAP@50-95:  0.5102
