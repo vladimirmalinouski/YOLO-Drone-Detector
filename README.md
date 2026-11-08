@@ -76,7 +76,6 @@ MP4 in your video player to review the detections.
 
 
 ## Data
----
 The data used to train the YOLO model comes from two sources  
 source #1  
 [zenodo](https://zenodo.org/records/16017313?preview_file=datasets_seg.zip)  
@@ -110,14 +109,14 @@ with these two datasets the YOLO model will be trained with
 - 500 images for test
 
 
-## First Training Round Results (imgsz 640)
+### First Training Round Results (imgsz 640)
 --- Test Results ---  
 - Precision:  0.9307
 - Recall:     0.8040
 - mAP@50:     0.8716
 - mAP@50-95:  0.4446
 
-## Training after tuning hyperparameters and training for 150 epochs (imgsz 1280)
+### Training after tuning hyperparameters and training for 150 epochs (imgsz 1280)
 --- Test Results ---
 - Precision:  0.9175
 - Recall:     0.8980
