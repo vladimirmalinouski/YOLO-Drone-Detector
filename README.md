@@ -1,3 +1,14 @@
+## Summary
+This repository contains the weights to a YOLO (you only look once) object detection model fine tuned to detect drones. The model is the yolo26n version and the weights are in the 
+```
+drone-detection-weights.pt
+```
+
+If you want to detect drones in a video you can run the following command: 
+```
+python detect-video.py INPUT_PATH OUTPUT_PATH
+```
+
 ## Install dependencies
 
 Run the commands below from the repository root (the folder containing
